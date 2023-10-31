@@ -5,8 +5,8 @@ import BookDetails from "./components/BookDetails.vue";
 import login from "./components/login.vue";
 
 const routes = [
-    { path: "/login", component: login },
-  { path: "/", component: Home },
+    { path: "/", component: login },
+  { path: "/home", component: Home },
 	
   { path: "/book", component: BookIndex },
   { path: "/book/show/:id", 

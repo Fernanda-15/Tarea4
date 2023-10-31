@@ -2,7 +2,7 @@
     <div id="app" class="container">
       <div class="row"  style="margin-top: 15px">
         <router-link class="three columns button button-primary" 
-          to="/">Home</router-link>
+          to="/login">Home</router-link>
         <router-link class="three columns button button-primary" 
           to="/book">Books</router-link>
         <router-link class="three columns button button-primary" 
