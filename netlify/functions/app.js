@@ -2,8 +2,12 @@
 const express = require('express');
 const cookieParser = require("cookie-parser");
 const sessions = require('express-session');
+const serverless = require('serverless-http');
+const exp = express();
+const bodyParser = require('body-parser');
 
-const app = express();
+// const app = express();
+const app = express.Router();
 const PORT = 4000;
 
 //username and password
@@ -59,4 +63,8 @@ app.get('/logout',(req,res) => {
     res.redirect('/');
 });
 
-app.listen(PORT, () => console.log(`Server Running at port ${PORT}`));
+// app.listen(PORT, () => console.log(`Server Running at port ${PORT}`));
+exp.use(bodyParser.json());
+exp.use('/.netlify/functions/books', app);
+module.exports = exp;
+module.exports.handler = serverless(exp);
