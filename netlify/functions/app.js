@@ -65,6 +65,6 @@ app.get('/logout',(req,res) => {
 
 // app.listen(PORT, () => console.log(`Server Running at port ${PORT}`));
 exp.use(bodyParser.json());
-exp.use('/.netlify/functions/books', app);
+exp.use('/.netlify/functions/app', app);
 module.exports = exp;
 module.exports.handler = serverless(exp);

@@ -23,7 +23,7 @@
     },
     methods: {
       submitForm() {
-        fetch(this.url + '/.netlify/functions/user', {
+        fetch(this.url + '/.netlify/functions/app', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
