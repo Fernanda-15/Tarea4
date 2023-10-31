@@ -43,7 +43,7 @@ app.get('/',(req,res) => {
     if(session.userid){
         res.send("Welcome User <a href=\'/logout'>click to logout</a>");
     }else
-    res.sendFile('views/index.html',{root:__dirname})
+    res.sendFile('components/home.vue',{root:__dirname})
 });
 
 app.post('/user',(req,res) => {
