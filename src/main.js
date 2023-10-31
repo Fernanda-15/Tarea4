@@ -7,6 +7,6 @@ import './assets/css/skeleton.css';
 
 const app = createApp(App);
   
-app.config.globalProperties.url = 'https://bookstore-rabbitmq.netlify.app';
+app.config.globalProperties.url = 'https://tarea-2-sistemas-distribuidos.netlify.app';
 
 app.use(router).mount("#app");

@@ -4,7 +4,7 @@ const rabbitPromise = require('./rabbitMQ');
 
 const headers = require('./headersCORS');
 
-const url = 'https://bookstore-rabbitmq.netlify.app/.netlify/functions/'
+const url = 'https://tarea-2-sistemas-distribuidos.netlify.app/.netlify/functions/'
 
 exports.handler = async (event, context) => {
 
