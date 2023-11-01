@@ -5,13 +5,11 @@ const sessions = require('express-session');
 const serverless = require('serverless-http');
 const exp = express();
 const bodyParser = require('body-parser');
-const headers = require('./headersCORS');
 
 // const app = express();
 const app = express.Router();
 const PORT = 4000;
 
-app.use(headers());
 //username and password
 const myusername = 'user1'
 const mypassword = 'mypassword'
