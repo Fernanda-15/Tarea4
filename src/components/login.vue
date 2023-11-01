@@ -40,11 +40,11 @@ export default {
                         console.log("SUCCESS", data.status);
                         this.$router.push('/home');
                     } else {
-                        console.error(data.error);
+                        console.error("ERROR",data.error);
                     }
                 })
                 .catch(error => {
-                    console.error(error);
+                    console.error("Error2",error);
                 });
 
         }
