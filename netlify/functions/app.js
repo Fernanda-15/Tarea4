@@ -43,7 +43,7 @@ app.get('/',(req,res) => {
     if(session.userid){
         res.send("Welcome User <a href=\'/logout'>click to logout</a>");
     }else
-    res.sendFile('components/home.vue',{root:__dirname})
+    res.sendFile('views/index.html',{root:__dirname})
 });
 
 app.post('/user',(req,res) => {
@@ -51,7 +51,8 @@ app.post('/user',(req,res) => {
         session=req.session;
         session.userid=req.body.username;
         console.log(req.session)
-        res.send(`Hey there, welcome <a href=\'/logout'>click to logout</a>`);
+        // res.send(`Hey there, welcome <a href=\'/logout'>click to logout</a>`);
+        res.status(200).json({ message: 'Login successful' });
     }
     else{
         res.send('Invalid username or password');

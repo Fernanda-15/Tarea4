@@ -36,6 +36,7 @@
         .then(response => response.json())
         .then(data => {
           if (data.success) {
+            console.log("SUCCESS", data.status);
             this.$router.push('/home');
           } else {
             console.error(data.error);
