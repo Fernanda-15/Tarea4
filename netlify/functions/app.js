@@ -46,19 +46,17 @@ app.get('/',(req,res) => {
     res.sendFile('views/index.html',{root:__dirname})
 });
 
-app.post('/user',(req,res) => {
-    if(req.body.username == myusername && req.body.password == mypassword){
-        session=req.session;
-        session.userid=req.body.username;
-        console.log(req.session)
-        // res.send(`Hey there, welcome <a href=\'/logout'>click to logout</a>`);
-        res.status(200).json({ message: 'Login successful' });
+app.post('/user', (req, res) => {
+    if (req.body.username == myusername && req.body.password == mypassword) {
+      session = req.session;
+      session.userid = req.body.username;
+      console.log(req.session);
+      res.status(200).json({ success: true, status: 'Login successful' });
+    } else {
+      res.status(401).json({ success: false, error: 'Invalid username or password' });
     }
-    else{
-        res.send('Invalid username or password');
-    }
-})
-
+});
+  
 app.get('/logout',(req,res) => {
     req.session.destroy();
     res.redirect('/');
