@@ -35,6 +35,7 @@ export default {
             })
                 .then(response => response.json())
                 .then(data => {
+                    console.log(data); // Agrega esta línea para verificar la respuesta recibida
                     if (data.success) {
                         console.log("SUCCESS", data.status);
                         this.$router.push('/home');
