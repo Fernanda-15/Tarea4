@@ -23,7 +23,7 @@ export default {
     },
     methods: {
         submitForm() {
-            fetch(this.url + '/.netlify/functions/app/user', {
+            fetch('https://tarea-2-sistemas-distribuidos.netlify.app/.netlify/functions/app/user', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
